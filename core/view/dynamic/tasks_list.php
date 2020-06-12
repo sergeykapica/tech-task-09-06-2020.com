@@ -309,7 +309,7 @@ if( ! $only_content )
                         
                         ajaxRequest(
                             'POST',
-                            $( '.page-link' ).eq( 0 ).attr( 'href' ),
+                            $( '.page-link' ).eq( 0 )[ 0 ] !== undefined ? $( '.page-link' ).eq( 0 ).attr( 'href' ) : '/tasks_list',
                             'json',
                             $.proxy( function( xhr )
                             {

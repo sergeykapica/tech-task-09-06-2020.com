@@ -132,6 +132,8 @@ class Index
     {
         if( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
         {
+            Authorization::check( false, true );
+            
             require_once( $_SERVER[ 'DOCUMENT_ROOT' ] . PATH_TO_MODEL_RELATIVE . 'DB.php' );
             
             array_walk( $_POST[ 'task_data' ], function( &$data )
