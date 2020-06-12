@@ -1,0 +1,40 @@
+@mixin background-cover-with-gradient( $image_path, $colorLeft, $colorRight ) {
+    background: -webkit-gradient( linear, left top, right top, from($colorLeft), color-stop(50%, $colorRight) ), url( $image_path ) no-repeat;
+  	background: -webkit-linear-gradient( left, $colorLeft, $colorRight 50% ), url( $image_path ) no-repeat;
+  	background: -moz-linear-gradient( left, $colorLeft, $colorRight 50% ), url( $image_path ) no-repeat;
+  	background: -o-linear-gradient( left, $colorLeft, $colorRight 50% ), url( $image_path ) no-repeat;
+  	background: linear-gradient( 90deg, $colorLeft, $colorRight 50% ), url( $image_path ) no-repeat;
+    -webkit-background-size: cover;
+  	   -moz-background-size: cover;
+  	     -o-background-size: cover;
+  	        background-size: cover;
+    background-position: center;
+}
+
+@mixin button( $background_color, $border-color ) {
+    background-color: $background_color;
+    border: 1px solid $border-color;
+    color: inherit;
+}
+
+@mixin transition( $property, $duration, $function, $delay ) {
+    -webkit-transition: $property $duration $function $delay;
+  	-o-transition: $property $duration $function $delay;
+  	-moz-transition: $property $duration $function $delay;
+  	transition: $property $duration $function $delay;
+}
+
+@mixin animation( $name, $duration, $function, $delay, $fillMode ) {
+    -webkit-animation: $name $duration $function $delay $fillMode;
+	   -moz-animation: $name $duration $function $delay $fillMode;
+	     -o-animation: $name $duration $function $delay $fillMode;
+	        animation: $name $duration $function $delay $fillMode;
+}
+
+@mixin transition( $property, $duration, $function, $delay ) {
+    -webkit-transition: $property $duration $function $delay;
+ 	-o-transition: $property $duration $function $delay;
+ 	-moz-transition: $property $duration $function $delay;
+ 	transition: $property $duration $function $delay;
+}
+
